@@ -1203,6 +1203,87 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     setTimeout(() => { const focusable = el.querySelector('h1, h2, h3, [tabindex], input, button, a'); if (focusable) focusable.setAttribute('tabindex', '-1'), focusable.focus({ preventScroll: true }); }, 600);
   });
 });
+
+// ── Hero cards dinámicos ─────────────────────────────────
+(function() {
+  const now  = new Date();
+  const dia  = now.getDay();
+  const mins = now.getHours() * 60 + now.getMinutes();
+
+  const CLASES = {
+    1: [{t:'08:30',n:'CF Metcon'},{t:'18:30',n:'GAP'},{t:'19:30',n:'CF Metcon'},{t:'20:30',n:'CF Metcon'}],
+    2: [{t:'18:30',n:'Hyrox'},{t:'19:30',n:'Levantamiento'}],
+    3: [{t:'08:30',n:'CF Gymnastics'},{t:'18:30',n:'GAP'},{t:'19:30',n:'CF Gymnastics'},{t:'20:30',n:'CF Gymnastics'}],
+    4: [{t:'18:30',n:'Hyrox'},{t:'19:30',n:'Levantamiento'}],
+    5: [{t:'08:30',n:'Levantamiento'},{t:'18:30',n:'GAP'},{t:'19:30',n:'Levantamiento'}],
+    6: [{t:'09:00',n:'Open Gym'}],
+    0: []
+  };
+
+  const HORARIO = {
+    1: [[7*60,13*60],[16*60,22*60]],
+    2: [[7*60,13*60],[16*60,22*60]],
+    3: [[7*60,13*60],[16*60,22*60]],
+    4: [[7*60,13*60],[16*60,22*60]],
+    5: [[7*60,13*60],[16*60,22*60]],
+    6: [[9*60,14*60]],
+    0: []
+  };
+
+  function estaAbierto() {
+    return (HORARIO[dia] || []).some(function(r){ return mins >= r[0] && mins < r[1]; });
+  }
+
+  function proximaClase() {
+    var hoy = (CLASES[dia] || []).find(function(c) {
+      var p = c.t.split(':'); return p[0]*60 + +p[1] > mins;
+    });
+    if (hoy) return hoy;
+    for (var i = 1; i <= 7; i++) {
+      var nd = (dia + i) % 7;
+      if ((CLASES[nd] || []).length) return CLASES[nd][0];
+    }
+    return null;
+  }
+
+  var DESCANSO = [
+    ['El gym descansa hoy',   'El lunes volvemos con todo'],
+    ['Día de recuperación',   'Recarga energía · el lunes seguimos'],
+    ['El gym está en pausa',  'Nos vemos el lunes a las 07:00'],
+    ['Cerrado por descanso',  'El lunes te esperamos en sala'],
+    ['Hoy recargamos pilas',  'El lunes de vuelta al trabajo']
+  ];
+
+  var esDescanso = dia === 0 || (dia === 6 && mins >= 14*60);
+
+  var cardLeft  = document.querySelector('.hero-float-left');
+  var cardRight = document.querySelector('.hero-float-right');
+
+  if (cardLeft) {
+    var dot   = cardLeft.querySelector('.live-dot');
+    var label = cardLeft.querySelector('.label');
+    var value = cardLeft.querySelector('.value');
+
+    if (estaAbierto()) {
+      label.textContent = 'En vivo';
+      value.textContent = '+25 entrenando ahora';
+    } else if (esDescanso) {
+      var idx = (now.getDate() + now.getMonth() * 31) % DESCANSO.length;
+      label.textContent = DESCANSO[idx][0];
+      value.textContent = DESCANSO[idx][1];
+      if (dot) dot.style.opacity = '0';
+    } else {
+      label.textContent = 'Fuera de horario';
+      value.textContent = 'Abrimos más tarde hoy';
+      if (dot) dot.style.opacity = '0';
+    }
+  }
+
+  if (cardRight) {
+    var proxima = proximaClase();
+    if (proxima) cardRight.querySelector('.value').textContent = proxima.n + ' · ' + proxima.t;
+  }
+})();
 </script>
 <a href="#contacto" class="float-cta" id="floatCta">Reservar clase gratis →</a>
 <a href="https://wa.me/56994384312" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
