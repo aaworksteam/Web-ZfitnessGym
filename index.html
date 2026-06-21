@@ -1254,14 +1254,16 @@ document.querySelectorAll('.btn').forEach(function(btn) {
     return (HORARIO[dia] || []).some(function(r){ return mins >= r[0] && mins < r[1]; });
   }
 
+  var DIAS = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
+
   function proximaClase() {
     var hoy = (CLASES[dia] || []).find(function(c) {
       var p = c.t.split(':'); return p[0]*60 + +p[1] > mins;
     });
-    if (hoy) return hoy;
+    if (hoy) return { clase: hoy, diaN: null };
     for (var i = 1; i <= 7; i++) {
       var nd = (dia + i) % 7;
-      if ((CLASES[nd] || []).length) return CLASES[nd][0];
+      if ((CLASES[nd] || []).length) return { clase: CLASES[nd][0], diaN: DIAS[nd] };
     }
     return null;
   }
@@ -1302,7 +1304,12 @@ document.querySelectorAll('.btn').forEach(function(btn) {
 
   if (cardRight) {
     var proxima = proximaClase();
-    if (proxima) cardRight.querySelector('.value').textContent = proxima.n + ' · ' + proxima.t;
+    if (proxima) {
+      var texto = proxima.diaN
+        ? proxima.diaN + ' · ' + proxima.clase.n + ' · ' + proxima.clase.t
+        : proxima.clase.n + ' · ' + proxima.clase.t;
+      cardRight.querySelector('.value').textContent = texto;
+    }
   }
 })();
 </script>
