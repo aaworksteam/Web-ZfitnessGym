@@ -1,11 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="6" fill="#0A0A0C"/>
-  <!-- Z: barra superior -->
-  <rect x="13" y="16" width="74" height="16" fill="white"/>
-  <!-- Z: diagonal — los cachitos son el sobrante del paralelogramo fuera de las barras:
-       (91,40) sobresale abajo-derecha de la barra superior (cachito hacia abajo)
-       (9,60) sobresale arriba-izquierda de la barra inferior (cachito hacia arriba) -->
-  <polygon points="91,40 83,24 9,60 17,76" fill="white"/>
-  <!-- Z: barra inferior -->
-  <rect x="13" y="68" width="74" height="16" fill="white"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" fill="#0A0A0C"/>
+  <rect x="3" y="3" width="26" height="6" fill="white"/>
+  <polygon points="31,13 27,5 1,19 5,27" fill="white"/>
+  <rect x="3" y="23" width="26" height="6" fill="white"/>
 </svg>
