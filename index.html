@@ -1325,7 +1325,24 @@ document.querySelectorAll('.btn').forEach(function(btn) {
       if (dot) dot.style.opacity = '0';
     } else {
       label.textContent = 'Fuera de horario';
-      value.textContent = 'Abrimos más tarde hoy';
+      var abreHoy = (HORARIO[dia] || []).some(function(r){ return r[0] > mins; });
+      if (abreHoy) {
+        var proxBloque = (HORARIO[dia] || []).filter(function(r){ return r[0] > mins; })[0];
+        var pHH = Math.floor(proxBloque[0] / 60);
+        var pMM = proxBloque[0] % 60;
+        value.textContent = 'Abrimos hoy a las ' + pHH + ':' + (pMM < 10 ? '0'+pMM : pMM);
+      } else {
+        for (var k = 1; k <= 7; k++) {
+          var nd = (dia + k) % 7;
+          if ((HORARIO[nd] || []).length) {
+            var nb = HORARIO[nd][0];
+            var nHH = Math.floor(nb[0] / 60);
+            var nMM = nb[0] % 60;
+            value.textContent = (k === 1 ? 'Mañana' : DIAS[nd]) + ' a las ' + nHH + ':' + (nMM < 10 ? '0'+nMM : nMM);
+            break;
+          }
+        }
+      }
       if (dot) dot.style.opacity = '0';
     }
   }
