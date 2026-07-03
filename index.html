@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#0A0A0C" />
 <title>Z Fitness — Entrenamiento premium en Chile</title>
-<link rel="icon" type="image/webp" href="logo.webp" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="apple-touch-icon" href="logo.webp" />
 <meta name="description" content="Z Fitness Batuco — el gym donde Cristian Aballay, fundador y coach, entrena personalmente a cada socio. Hyrox, CrossFit, GAP, Levantamiento y Personal Trainer. Prueba gratis sin compromiso." />
 <meta property="og:title" content="Z Fitness — Entrenamiento premium" />
@@ -255,7 +255,7 @@ h3{font-size:clamp(1.25rem,2vw,1.5rem);line-height:1.2;}
 .testi-author .meta{color:var(--text-tertiary);font-size:0.8125rem;margin-top:2px;}
 .pricing{display:grid;grid-template-columns:repeat(3,minmax(0,380px));gap:20px;align-items:stretch;justify-content:center;}
 @media (max-width:880px) {.pricing{grid-template-columns:1fr;}}
-.plan{position:relative;background:linear-gradient(145deg,rgba(21,21,28,0.5),rgba(10,10,12,0.8));border:1px solid var(--border);border-radius:var(--radius-lg);display:flex;flex-direction:column;transition:border-color 200ms var(--ease);}
+.plan{position:relative;background:linear-gradient(145deg,rgba(21,21,28,0.5),rgba(10,10,12,0.8));border:1px solid var(--border);border-radius:12px;display:flex;flex-direction:column;transition:border-color 200ms var(--ease);}
 .plan:hover{border-color:var(--border-strong);}
 .plan.featured{border-color:rgba(255,255,255,0.22);background:linear-gradient(145deg,rgba(30,30,42,0.6),rgba(15,15,24,0.9));}
 .plan.featured:hover{border-color:rgba(255,255,255,0.35);}
@@ -294,7 +294,7 @@ h3{font-size:clamp(1.25rem,2vw,1.5rem);line-height:1.2;}
 .faq-icon{width:28px;height:28px;border-radius:50%;border:1px solid var(--border-strong);display:grid;place-items:center;flex-shrink:0;transition:transform 200ms var(--ease),background 200ms var(--ease);}
 .faq[open] .faq-icon{transform:rotate(45deg);background:var(--accent);border-color:var(--accent);color:var(--accent-text);}
 .faq-icon svg{width:14px;height:14px;}
-.faq-body{padding:0 24px 22px;color:var(--text-secondary);}
+.faq-body{padding:0 24px 22px;color:var(--text-secondary);overflow:hidden;transition:height .42s cubic-bezier(.16,1,.3,1),padding-bottom .42s cubic-bezier(.16,1,.3,1);}
 .cta-banner{position:relative;border-radius:var(--radius-xl);overflow:hidden;padding:clamp(48px,8vw,96px);background:var(--bg-card);border:1px solid var(--border);text-align:center;isolation:isolate;}
 .cta-banner::before{content:'';position:absolute;inset:0;z-index:-2;background:url('fotos/zfit-cta.jpg') center 30%/cover;opacity:0.40;}
 .cta-banner::after{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at center,rgba(10,10,12,0.4),rgba(10,10,12,0.95)),linear-gradient(180deg,rgba(10,10,12,0.6),rgba(10,10,12,0.95));}
@@ -802,10 +802,10 @@ footer{border-top:1px solid var(--border);background:var(--bg-elevated);padding:
   <div class="container">
     <div class="section-head reveal"><h2>El estándar más alto. Sin excepciones.</h2><p>Porque cuando el lugar es bueno y la gente te empuja, las ganas vienen solas.</p></div>
     <div class="features">
-      <div class="feat reveal-lr"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div><h3>+800 m² equipados</h3><p>Zona de pesas, máquinas, ski ergs, assault bikes y área funcional. Todo en un solo espacio, sin esperar ni apretarse.</p></div>
-      <div class="feat reveal-lr"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/><circle cx="12" cy="16" r="1"/><circle cx="20" cy="16" r="1"/></svg></div><div class="feat-stat">Gratis</div><h3>Estacionamiento privado</h3><p>Llegas, estacionas y entrenas. Sin vueltas, sin buscar dónde dejar el auto. Gratis para todos los socios.</p></div>
+      <div class="feat reveal-lr"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></div><h3>+800 m² equipados</h3><p>Zona de pesas, máquinas, ski ergs, assault bikes y área funcional. Todo en un solo espacio, sin esperar ni apretarse.</p></div>
+      <div class="feat reveal-lr"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg></div><div class="feat-stat">Gratis</div><h3>Estacionamiento privado</h3><p>Llegas, estacionas y entrenas. Sin vueltas, sin buscar dónde dejar el auto. Gratis para todos los socios.</p></div>
       <div class="feat reveal-lr"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><div class="feat-stat">1 a 1</div><h3>Personal Trainer &amp; Nutricionista</h3><p>Si quieres un plan 100% personalizado, tienes acceso a entrenamiento individual y asesoría nutricional integrada.</p></div>
-      <div class="feat reveal-lr"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-12V5l-8-3-8 3v5c0 8 8 12 8 12z"/></svg></div><div class="feat-stat">+120</div><h3>Comunidad que te empuja</h3><p>Acá la gente se conoce por nombre. El ambiente es serio, cercano y sin pretensiones — un lugar donde quieres volver.</p></div>
+      <div class="feat reveal-lr"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-12V5l-8-3-8 3v5c0 8 8 12 8 12z"/></svg></div><div class="feat-stat">+120</div><div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-tertiary);margin:-2px 0 8px;">clientes</div><h3>Comunidad que te empuja</h3><p>Acá la gente se conoce por nombre. El ambiente es serio, cercano y sin pretensiones — un lugar donde quieres volver.</p></div>
     </div>
     <div aria-hidden="true" style="position:relative;height:100px;margin-top:-40px;background:radial-gradient(ellipse 55% 100% at 50% 100%,rgba(255,255,255,0.045) 0%,transparent 100%);pointer-events:none;"></div>
   </div>
@@ -884,7 +884,7 @@ footer{border-top:1px solid var(--border);background:var(--bg-elevated);padding:
           <li class="excluded"><span class="ben-icon cross"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span> Clases grupales no incluidas</li>
         </ul>
         <div class="plan-footer">
-          <a href="#contacto" class="btn btn-ghost">Consultar</a>
+          <a href="https://wa.me/56994384312?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20Z%20Fitness%20y%20me%20interesa%20el%20plan%20Solo%20M%C3%A1quinas%20de%20%2435.000%2Fmes.%20%C2%BFPodr%C3%ADa%20agendar%20una%20visita%20para%20conocer%20las%20instalaciones%3F" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Consultar</a>
         </div>
       </article>
       <article class="plan featured reveal">
@@ -902,7 +902,7 @@ footer{border-top:1px solid var(--border);background:var(--bg-elevated);padding:
           <li><span class="ben-icon check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span> 3 meses: $130.000 · 6M: $230.000</li>
         </ul>
         <div class="plan-footer">
-          <a href="#contacto" class="btn btn-primary">Elegir este plan</a>
+          <a href="https://wa.me/56994384312?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20Z%20Fitness%20y%20me%20interesa%20el%20plan%20de%2012%20Clases%20a%20%2448.000%2Fmes.%20%C2%BFC%C3%B3mo%20puedo%20agendar%20mi%20clase%20de%20prueba%20gratuita%3F" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Elegir este plan</a>
         </div>
       </article>
       <article class="plan reveal">
@@ -919,7 +919,7 @@ footer{border-top:1px solid var(--border);background:var(--bg-elevated);padding:
           <li><span class="ben-icon check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span> 8 clases: $38.000 · 16 clases: $53.000</li>
         </ul>
         <div class="plan-footer">
-          <a href="#contacto" class="btn btn-ghost">Elegir este plan</a>
+          <a href="https://wa.me/56994384312?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20Z%20Fitness%20y%20me%20interesa%20el%20plan%20de%2024%20Clases%20a%20%2458.000%2Fmes.%20%C2%BFC%C3%B3mo%20puedo%20agendar%20mi%20clase%20de%20prueba%20gratuita%3F" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Elegir este plan</a>
         </div>
       </article>
     </div>
@@ -957,7 +957,7 @@ footer{border-top:1px solid var(--border);background:var(--bg-elevated);padding:
     <div class="section-head reveal"><h2>Entrenamiento real.<br/>Con quien sabe.</h2><p>Z Fitness tiene un único coach — el dueño. Sin intermediarios, sin instructores rotativos. Cada socio entrena con la misma persona que construyó este lugar.</p></div>
     <div class="team-grid">
       <div class="reveal team-photo-wrap" style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:3/4;background:var(--bg-card);border:1px solid var(--border);">
-        <img src="fotos/coach.jpeg" alt="Cristian Aballay — Fundador y Head Coach Z Fitness" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+        <img src="fotos/coach.jpeg" alt="Cristian Aballay — Fundador y Head Coach Z Fitness" style="width:100%;height:100%;object-fit:cover;object-position:center 38%;" />
       </div>
       <div class="reveal" style="display:flex;flex-direction:column;gap:24px;">
         <div>
@@ -967,8 +967,8 @@ footer{border-top:1px solid var(--border);background:var(--bg-elevated);padding:
         <p style="color:var(--text-secondary);font-size:1.0625rem;line-height:1.65;margin:0;">Construyó Z Fitness desde cero porque creyó que un gym podía ser algo más que una sala de máquinas — un lugar donde la gente realmente quiere estar. Su forma de entrenar es directa, cercana y sin vueltas: te conoce por nombre, entiende tus metas y está ahí cada día para que no abandones cuando se pone difícil.</p>
         <blockquote style="margin:0;border-left:2px solid var(--accent);padding-left:18px;color:var(--text-primary);font-size:1rem;line-height:1.6;font-style:italic;">"La constancia no es un talento, es una decisión. Mi trabajo es que tomes esa decisión todos los días — y que encima la disfrutes."</blockquote>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-          <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:16px;"><div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:6px;">Especialidad</div><div style="font-weight:600;font-size:0.9375rem;">Hyrox · CrossFit<br/>Fuerza · Bodybuilding</div></div>
-          <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:16px;"><div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:6px;">Disponible para</div><div style="font-weight:600;font-size:0.9375rem;">Clases grupales<br/>Personal Trainer</div></div>
+          <div style="background:linear-gradient(145deg,rgba(21,21,28,0.5),rgba(10,10,12,0.8));border:1px solid var(--border);border-radius:var(--radius-md);padding:16px;"><div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:6px;">Especialidad</div><div style="font-weight:600;font-size:0.9375rem;">Hyrox · CrossFit<br/>Fuerza · Bodybuilding</div></div>
+          <div style="background:linear-gradient(145deg,rgba(21,21,28,0.5),rgba(10,10,12,0.8));border:1px solid var(--border);border-radius:var(--radius-md);padding:16px;"><div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:6px;">Disponible para</div><div style="font-weight:600;font-size:0.9375rem;">Clases grupales<br/>Personal Trainer</div></div>
         </div>
         <a href="#contacto" class="btn btn-ghost" style="align-self:flex-start;">Reservar sesión con él <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
       </div>
@@ -1339,6 +1339,31 @@ document.querySelectorAll('.btn').forEach(function(btn) {
       cardRight.querySelector('.value').textContent = texto;
     }
   }
+})();
+// ── FAQ smooth open/close ─────────────────────────────────
+(function(){
+  document.querySelectorAll('.faq').forEach(function(el){
+    var body = el.querySelector('.faq-body');
+    if(!body) return;
+    if(!el.open){body.style.height='0px';body.style.paddingBottom='0px';}
+    el.querySelector('summary').addEventListener('click',function(e){
+      e.preventDefault();
+      if(el.open){
+        body.style.height=body.scrollHeight+'px';
+        body.offsetHeight;
+        body.style.height='0px';
+        body.style.paddingBottom='0px';
+        setTimeout(function(){el.open=false;},440);
+      } else {
+        el.open=true;
+        var h=body.scrollHeight+22;
+        body.style.height='0px';body.style.paddingBottom='0px';
+        body.offsetHeight;
+        body.style.height=h+'px';body.style.paddingBottom='22px';
+        setTimeout(function(){body.style.height='';},440);
+      }
+    });
+  });
 })();
 </script>
 <a href="#contacto" class="float-cta" id="floatCta">Reservar clase gratis →</a>
