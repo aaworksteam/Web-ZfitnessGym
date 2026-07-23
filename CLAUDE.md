@@ -6,7 +6,7 @@
 
 ## 🏋️ ¿Qué es este proyecto?
 
-Landing page de **Z Fitness**, un gimnasio premium ubicado en **Batuco, Chile** (Santa Rosa con Los Guerreros, al lado de la iglesia de piedra). Sitio web de una sola página (`index.html`) desplegado en **Vercel** → [web-zfitnessgym.vercel.app](https://web-zfitnessgym.vercel.app).
+Landing page de **Z Fitness**, un gimnasio premium ubicado en **Batuco, Chile** (Santa Rosa con Los Guerreros, al lado de la iglesia de piedra). Sitio web de una sola página (`index.html`) desplegado en **Vercel** → [zfitnessgym.vercel.app](https://zfitnessgym.vercel.app).
 
 El sitio fue creado por **AA Works** (Alonso Aballay) → 
 

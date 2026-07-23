@@ -7,8 +7,8 @@
 ## 📌 Estado actual del proyecto
 
 - **Versión:** v1.0 (lanzamiento)
-- **URL producción:** https://zfitnessgym.netlify.app/
-- **Deploy:** Netlify (automático)
+- **URL producción:** https://zfitnessgym.vercel.app/
+- **Deploy:** Vercel (automático desde push a `main`)
 - **Última actualización registrada:** Mayo 2026
 
 ---
@@ -80,7 +80,7 @@
 
 ## 🔗 Referencias útiles
 
-- [Netlify Dashboard](https://app.netlify.com/) — para ver deploys y logs
+- [Vercel Dashboard](https://vercel.com/alonso-projects1303/zfitnessgym) — para ver deploys y logs
 - [Google Maps embed](https://www.google.com/maps?q=Z+Fitness+Batuco+Santa+Rosa+Los+Guerreros&output=embed)
 - [Instagram del gym](https://instagram.com/zfitness.cl)
 - [WhatsApp directo](https://wa.me/56994384312)

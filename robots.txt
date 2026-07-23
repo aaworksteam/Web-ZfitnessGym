@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zfitnessgym.netlify.app/sitemap.xml
+Sitemap: https://zfitnessgym.vercel.app/sitemap.xml
